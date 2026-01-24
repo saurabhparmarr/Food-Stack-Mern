@@ -35,7 +35,3 @@ FoodStack is a full-stack **MERN food ordering web application** that allows use
 - VS Code
 - Postman
 
----
-
-## 📁 Project Structure
-
