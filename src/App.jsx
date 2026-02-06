@@ -8,12 +8,17 @@ import Orders from "./screen/Orders";
 import Navbar from "./components/Navbar";
 import CartPage from "./screen/CartPage";
 import { CartProvider } from "./components/ContextReducer";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <CartProvider>
       
         <Navbar />
+
+
+        <Toaster position="top-right" reverseOrder={false} />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

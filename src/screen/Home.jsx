@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}/api/products`)
+      .get("http://localhost:5000/api/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);
