@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# ignore all env files
+.env
+mernapp/.env
+mernapp/backend/.env
