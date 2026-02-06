@@ -1,4 +1,5 @@
 import React from "react";
+import toast from "react-hot-toast";
 import { useCart, useDispatchCart } from "../components/ContextReducer";
 
 const CartPage = () => {
@@ -6,14 +7,16 @@ const CartPage = () => {
   const cart = context?.cart || [];
   const dispatch = useDispatchCart();
 
-  const handlePlaceOrder = () => {
-    if(cart.length === 0){
-      alert("Cart is empty!");
-      return;
-    }
-    dispatch({ type: "PLACE_ORDER" });
-    alert("Order placed successfully!");
-  };
+ const handlePlaceOrder = () => {
+  if (cart.length === 0) {
+    toast.error("Cart is empty!");
+    return;
+  }
+
+  dispatch({ type: "PLACE_ORDER" });
+  toast.success("Order placed successfully 🎉");
+};
+
 
   const handleRemoveItem = (item) => {
     dispatch({ type: "REMOVE", id: item.id, size: item.size });
